@@ -1,0 +1,19 @@
+-# _movie_form.html.haml
+-# Partial to render movie form
+
+-# Output error messages if they occur
+- unless @actor.errors.empty?
+  #warning
+    Errors prevented this movie from being #{controller.action_name}d:
+    %ul
+      - @actor.errors.full_messages.each do |error|
+        %li= error
+
+= label :actor, :name, 'Full Name'
+= text_field :actor, 'name'
+
+= label :actor, :birthDate, 'Birth Date'
+= date_select :actor, :birthDate, {start_year: 100.years.ago.year, end_year: Date.today.year, Default: Date.today}
+
+= label :actor, :homeTown, 'Home Town'
+= text_field :actor, 'homeTown'

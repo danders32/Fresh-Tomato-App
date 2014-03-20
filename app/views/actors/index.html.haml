@@ -1,0 +1,19 @@
+-#  This file is app/views/movies/index.html.haml
+%h1 All Actors
+
+%table#movies
+  %thead
+    %tr
+      %th Actor Name
+      %th Birth Date
+      %th Home Town
+  %tbody
+    - @actors.each do |actor|
+      %tr
+        %td= actor.name 
+        %td= actor.birthDate
+        %td= actor.homeTown
+        
+#footer-links
+  = link_to 'Add Actor', new_actor_path
+  = link_to 'Go Back to Movies', movies_path

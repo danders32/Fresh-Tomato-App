@@ -1,0 +1,8 @@
+%h2 Actor Creator
+
+= form_tag actors_path, :method => :post do
+  = render :partial => 'actor_form'
+  = submit_tag 'Save'
+
+#footer-links
+  = link_to "Return to actors list", actors_path

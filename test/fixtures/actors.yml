@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  actorId: 1
+  name: MyString
+  birthDate: 2014-03-15 10:08:52
+  homeTown: MyString
+
+two:
+  actorId: 1
+  name: MyString
+  birthDate: 2014-03-15 10:08:52
+  homeTown: MyString
